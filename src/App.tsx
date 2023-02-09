@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import { grommet, Box, Grommet } from "grommet";
 import './App.css';
+import { HeaderCard } from './components/Header/HeaderCard';
+import { FooterCard } from './components/Footer/FooterCard';
+import { DashboardCard } from './components/Dashboard/DashboardCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grommet theme={grommet} full>
+        <Box fill>
+        <HeaderCard></HeaderCard>
+        <DashboardCard></DashboardCard>
+        <FooterCard></FooterCard>
+        </Box>
+      </Grommet>
   );
 }
 
